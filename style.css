@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  /* overflow: hidden; */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  background-color: lightskyblue;
+  padding: 30px;
+}
+
+.buttons {
+  margin-top: auto;
+}
+
+/* buttons */
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  background-color: lightskyblue;
+  padding: 100px;
+}
+
+.buttons * {
+  margin: 0px 30px;
+}
+
+button {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 7px;
+  font-weight: bolder;
+  font-size: larger;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: rgb(3, 3, 177);
+}
+
+button[disabled] {
+  background-color: lightblue;
+  cursor: not-allowed;
+}
+
+/* data container */
+.data-container {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  height: 100%;
+}
+
+.bar {
+  padding: 30px 12px;
+  background-color: lightskyblue;
+  border: 1px solid black;
+  border-top: none;
+  transition: 0.1s all ease;
+}
+
+.bar-dark {
+  background-color: darkblue;
+  color: white;
+}
+
+.bar-active {
+  background-color: orange;
+  color: white;
+}
+
+.bar-min {
+  background-color: orangered;
+  color: white;
+}
+
+.bar-success {
+  background-color: rgb(104, 180, 117);
+  color: black;
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 1125px) {
+  .bar {
+    padding: 30px 6px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .bar {
+    padding: 30px 3px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .data-container {
+    gap: 6px;
+  }
+}
